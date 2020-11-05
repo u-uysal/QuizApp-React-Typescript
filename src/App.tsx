@@ -64,7 +64,14 @@ function App() {
   }
 
   const nextQuestion = () => {
+    //If we are not the last question
 
+    const nextQuestionNumber = number + 1;
+    if (nextQuestionNumber === TOTAL_QUESTIONS) {
+      setGameOver(true)
+    } else {
+      setNumber(nextQuestionNumber)
+    }
   }
 
   console.log(userAnswers)
