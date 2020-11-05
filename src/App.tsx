@@ -21,6 +21,7 @@ function App() {
 
 
 
+
   const TOTAL_QUESTIONS = 10;
   console.log(questions)
 
@@ -82,6 +83,7 @@ function App() {
       <Wrapper>
         <h1>React Quiz App</h1>
 
+
         {/* hide start button in case of these situations */}
         {
           gameOver || userAnswers.length === TOTAL_QUESTIONS ? <button className="start" onClick={startTrivia}>Start</button> : null
@@ -89,7 +91,7 @@ function App() {
 
         {/* hide score if game is over */}
 
-        {!gameOver ? <p className="score">Score {score}</p> : null}
+        {!gameOver ? <p className="score">Score : {score}</p> : null}
 
         {/* hide if we dont wait anything */}
 
