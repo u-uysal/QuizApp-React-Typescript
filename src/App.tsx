@@ -40,18 +40,53 @@ function App() {
 
   const checkAnswer = (e: React.MouseEvent<HTMLButtonElement>) => {
 
+    if (!gameOver) {
+      //users answer
+      const UserAnswer = e.currentTarget.value
+      // check if it is true
+      const Iscorrect = questions[number].correct_answer === UserAnswer;
+
+      if (Iscorrect) {
+        setScore(prev => prev + 1)
+      }
+
+      // save answer in the array for user answers
+
+      const AnswerObject = {
+        question: questions[number].question,
+        answer: UserAnswer,
+        correct: Iscorrect,
+        correctAnswer: questions[number].correct_answer,
+      }
+      setUserAnswers(prev => [...prev, AnswerObject])
+    }
+
   }
 
   const nextQuestion = () => {
 
   }
+
+  console.log(userAnswers)
   return (
     <div className="App">
       <h1>React Quiz App</h1>
-      <button className="start" onClick={startTrivia}>Start</button>
-      <p className="score">Score</p>
-      <p>Loading questions...</p>
-      {/* <QuestionCard
+
+      {/* hide start button in case of these situations */}
+      {
+        gameOver || userAnswers.length === TOTAL_QUESTIONS ? <button className="start" onClick={startTrivia}>Start</button> : null
+      }
+
+      {/* hide score if game is over */}
+
+      {!gameOver ? <p className="score">Score</p> : null}
+
+      {/* hide if we dont wait anything */}
+
+      {loading ? <p>Loading questions...</p> : null}
+
+
+      {!loading && !gameOver ? <QuestionCard
         questionsNr={number + 1}
         totalQuestions={TOTAL_QUESTIONS}
         question={questions[number].question}
@@ -60,8 +95,9 @@ function App() {
         callback={checkAnswer}
 
 
-      /> */}
-      <button className='next' onClick={nextQuestion}>Next Question</button>
+      /> : null}
+      {!gameOver && !loading && userAnswers.length === number + 1 && number !== TOTAL_QUESTIONS - 1
+        ? <button className='next' onClick={nextQuestion}>Next Question</button> : null}
     </div>
   );
 }
