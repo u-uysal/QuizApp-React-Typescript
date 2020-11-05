@@ -3,7 +3,7 @@ import QuestionCard from "./components/QuestionCard"
 import { fetchQuizQuestions } from "./API"
 import { Difficulty, QuestionState } from "./API"
 
-type AnswerObject = {
+export type AnswerObject = {
   question: string;
   answer: string;
   correct: boolean;
@@ -86,7 +86,7 @@ function App() {
 
       {/* hide score if game is over */}
 
-      {!gameOver ? <p className="score">Score</p> : null}
+      {!gameOver ? <p className="score">Score {score}</p> : null}
 
       {/* hide if we dont wait anything */}
 
