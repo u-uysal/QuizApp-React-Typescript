@@ -1,46 +1,82 @@
-# Getting Started with Create React App
+# :crystal_ball: Quiz App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> This repository is created by using HTML5, Styled Components,Typescript and ReactJS .
+> One of the main outcomes of this project is figuring out how to create, explore and run a web application in a development environment, then deploying it to the production environment in accordance with **Test-Driven-Development(TDD)** approach.
 
-## Available Scripts
+>Thanks to this application, the user can chat with the person whoever they want after google auth, even if they are online later, they can review the messages again, as the previous messages are saved in the database, and delete the messages they do not want.
 
-In the project directory, you can run:
 
-### `yarn start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+---
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Index
 
-### `yarn test`
+- [Learning Objectives and Supported Skills](#learning-objectives-and-supported-skills)
+- [Installation](#installation)
+- [Technology-Tool-Stack](#technology-tool-stack)
+- [Contributing](#contributing)
+- [License](#credits)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `yarn build`
+## Learning Objectives and Supported Skills
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Creating a user friendly React Application (using Functional Components and Hooks)
+- Building wireframes, mocks and prototype of pages
+- Setting up a professional folder structure
+- Understanding Test-Driven-Development(TDD)
+- Implementing Continuous Integration and Continuous Deployment (CI/CD)
+- Setting up API endpoints
+- Debugging ReactJs code in IDE
+- Exploring and understanding DOM
+- Exploring and understanding Typescript
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Installation
 
-### `yarn eject`
+### Prerequisites
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- You should have [npm](https://nodejs.org/en/download/) installed on your machine.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Clone the repository:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```
+git clone https://github.com/u-uysal/QuizApp-React-Typescript.git
+cd my-app
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```
 
-## Learn More
+- Install dependancies:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+npm install
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Run the app in:
+
+```
+npm start
+```
+
+- Open [http://localhost:3000](http://localhost:3000) to view the page in your browser.
+
+## Technology-Tool-Stack
+
+- **React** : React. js is an open-source JavaScript library that is used for building user interfaces specifically for single-page applications. It's used for handling the view layer for web and mobile apps. React also allows us to create reusable UI components.
+
+- **Styled Components** : styled-components utilises tagged template literals to style your components. It removes the mapping between components and styles. This means that when you're defining your styles, you're actually creating a normal React component, that has your styles attached to it..
+
+- **TypeScript** : TypeScript is a programming language developed and maintained by Microsoft. It is a strict syntactical superset of JavaScript and adds optional static typing to the language. TypeScript is designed for development of large applications and transcompiles to JavaScript. As TypeScript is a superset of JavaScript, existing JavaScript programs are also valid TypeScript programs.
+
+---
+
+## Contributing
+
+- You are more than welcomed to contribute in this project by opening an issue or sending a pull request.
+
+---
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE.md file for details
